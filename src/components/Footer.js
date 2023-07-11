@@ -9,22 +9,22 @@ const Footer = () => {
       <div>
         <ul>
           <li>
-            <a href='#'>Home</a>
+            <a href='/'>Home</a>
           </li>
           <li>
-            <a href='#'>About</a>
+            <a href='/'>About</a>
           </li>
           <li>
-            <a href='#'>Menu</a>
+            <a href='/'>Menu</a>
           </li>
           <li>
-            <a href='#'>reservations</a>
+            <a href='/'>reservations</a>
           </li>
           <li>
-            <a href='#'>order online</a>
+            <a href='/'>order online</a>
           </li>
           <li>
-            <a href='#'>login</a>
+            <a href='/'>login</a>
           </li>
         </ul>
       </div>

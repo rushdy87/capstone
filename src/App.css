@@ -1,8 +1,9 @@
-/* Nav bar */
-nav {
+header {
+  margin: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
+/* Nav bar */
 
 nav ul {
   display: flex;
