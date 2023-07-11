@@ -1,14 +1,26 @@
+import { Route, Routes } from 'react-router-dom';
+import {
+  About,
+  Homepage,
+  Login,
+  Menu,
+  OrderOnline,
+  Reservations,
+} from './pages';
+
 import './App.css';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
 
 function App() {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Homepage />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/menu' element={<Menu />} />
+        <Route path='/order-online' element={<OrderOnline />} />
+        <Route path='/reservations' element={<Reservations />} />
+      </Routes>
     </>
   );
 }
