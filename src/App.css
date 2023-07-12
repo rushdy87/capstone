@@ -12,34 +12,3 @@ a {
     margin-top: 70px;
   }
 }
-
-/* Footer */
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-footer ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 10px;
-  list-style: none;
-}
-
-footer li {
-  font-size: 1.2rem;
-  color: black;
-}
-
-footer a {
-  text-decoration: none;
-  color: black;
-}
-
-footer a:hover {
-  color: white;
-  background-color: black;
-}

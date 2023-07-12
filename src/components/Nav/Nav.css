@@ -11,11 +11,11 @@
   list-style: none;
   font-size: 1.2rem;
   font-weight: 500;
-  border-radius: 10px;
   padding: 5px;
+  text-align: center;
 }
 
-.nav-item:hover {
+.nav-item a:hover {
   background-color: #f4ce14;
   font-weight: 700;
 }
