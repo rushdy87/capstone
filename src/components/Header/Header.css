@@ -7,8 +7,8 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100px;
-  margin: 5px 10px;
+  height: 150px;
+  margin: 5px 0;
   background-color: #dfdfdf;
   transition: 0.6s;
 }
