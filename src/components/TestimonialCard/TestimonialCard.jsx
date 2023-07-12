@@ -4,7 +4,9 @@ const TestimonialCard = ({ testimonial }) => {
   const randerRating = (rating) => {
     let rateStars = [];
     for (let i = 1; i <= rating; i++) {
-      rateStars.push(<StarRateIcon fontSize='small' sx={{ color: 'gold' }} />);
+      rateStars.push(
+        <StarRateIcon fontSize='small' sx={{ color: 'gold' }} key={i} />
+      );
     }
     return rateStars;
   };

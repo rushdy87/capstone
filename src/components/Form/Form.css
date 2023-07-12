@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 100px 20px 20px 20px;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.input label {
+  flex: 5;
+  font-size: 1.2rem;
+}
+
+.input input {
+  flex: 7;
+  align-self: start;
+}
+
+.comments {
+  width: 300px;
+}
+
+.comments textarea {
+  width: 100%;
+}
+
+.form button {
+  background-color: #f4ce14;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 5px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 821px) {
+  .input {
+    width: 500px;
+    flex-direction: row;
+  }
+  .comments {
+    width: 500px;
+  }
+}
