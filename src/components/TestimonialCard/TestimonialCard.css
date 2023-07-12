@@ -1,0 +1,13 @@
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 200px;
+  height: 140px;
+  padding: 3px;
+  background-color: #dfdfdf;
+}
+
+.testimonial .name {
+  font-weight: 500;
+}
