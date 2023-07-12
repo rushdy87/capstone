@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { Header } from './components';
 import {
   About,
   Homepage,
@@ -13,14 +14,17 @@ import './App.css';
 function App() {
   return (
     <>
-      <Routes>
-        <Route path='/' element={<Homepage />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/menu' element={<Menu />} />
-        <Route path='/order-online' element={<OrderOnline />} />
-        <Route path='/reservations' element={<Reservations />} />
-      </Routes>
+      <Header />
+      <div className='routes-container'>
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route path='/order-online' element={<OrderOnline />} />
+          <Route path='/reservations' element={<Reservations />} />
+        </Routes>
+      </div>
     </>
   );
 }
