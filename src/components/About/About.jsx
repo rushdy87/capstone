@@ -12,12 +12,12 @@ const About = () => {
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt nostrud amet. Amet minim mollit non deserunt
           ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-          duis enim velit mollit.{' '}
+          duis enim velit mollit.
         </p>
       </div>
       <div className='images'>
-        <img src={FoodOne} alt='food' className='first-img' />
-        <img src={FoodTwo} alt='food' className='second-img' />
+        <img src={FoodOne} alt='food1' className='first-img' />
+        <img src={FoodTwo} alt='food2' className='second-img' />
       </div>
     </section>
   );
