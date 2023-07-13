@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Footer, Header } from './components';
+import { ConfirmedBooking, Footer, Header } from './components';
 import {
   About,
   Homepage,
@@ -23,6 +23,7 @@ function App() {
           <Route path='/menu' element={<Menu />} />
           <Route path='/order-online' element={<OrderOnline />} />
           <Route path='/reservations' element={<Reservations />} />
+          <Route path='/confirmation' element={<ConfirmedBooking />} />
         </Routes>
         <Footer />
       </div>

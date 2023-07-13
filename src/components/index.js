@@ -6,3 +6,4 @@ export { default as FoodCard } from './FoodCard/FoodCard';
 export { default as Testimonials } from './Testimonials/Testimonials';
 export { default as About } from './About/About';
 export { default as Form } from './Form/Form';
+export { default as ConfirmedBooking } from './ConfirmedBooking/ConfirmedBooking';

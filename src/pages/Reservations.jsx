@@ -1,18 +1,20 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 import { Form } from '../components';
+import { fetchAPI } from '../utils/bookingsAPI';
 
 const Reservations = () => {
-  const [reserveData, setReserveData] = useState({});
+  function updateTimes(date) {
+    return fetchAPI(date);
+  }
 
-  const handleReservations = (data) => {
-    setReserveData(data);
-  };
+  const output = fetchAPI(new Date());
 
-  console.log(reserveData);
+  const [availableTimes, dispatch] = useReducer(updateTimes, output);
+
   return (
     <>
       <h1 style={{ textAlign: 'center' }}>Reservations</h1>
-      <Form handleReservations={handleReservations} />;
+      <Form availableTimes={availableTimes} updateTimes={dispatch} />;
     </>
   );
 };

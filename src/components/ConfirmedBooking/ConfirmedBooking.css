@@ -1,0 +1,39 @@
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirmation-header {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirmation-image {
+  width: 90%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.confirmation-heading {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.confirmation-sub-heading {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.confirmation-button {
+  font-size: 16px;
+  background-color: #eeeeee;
+  color: #000000;
+  background-color: #f4ce14;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-weight: 500;
+  border: none;
+}

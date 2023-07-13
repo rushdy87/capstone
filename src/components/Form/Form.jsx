@@ -1,31 +1,27 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Form.css';
+import { submitAPI } from '../../utils/bookingsAPI';
 
-const Form = ({ handleReservations }) => {
+const Form = ({ availableTimes, updateTimes }) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     people: 1,
     date: '',
-    time: '',
     occasion: '',
     preferences: '',
     comments: '',
   });
 
-  const {
-    name,
-    email,
-    phone,
-    people,
-    date,
-    time,
-    occasion,
-    preferences,
-    comments,
-  } = formData;
+  const { name, email, phone, people, date, occasion, preferences, comments } =
+    formData;
 
+  const [finalTime, setFinalTime] = useState(
+    availableTimes.map((times) => <option key={times}>{times}</option>)
+  );
   const handleChang = (event) => {
     setFormData((prevState) => ({
       ...prevState,
@@ -33,20 +29,34 @@ const Form = ({ handleReservations }) => {
     }));
   };
 
+  function handleDateChange(e) {
+    setFormData((prev) => ({ ...prev, date: e.target.value }));
+
+    var stringify = e.target.value;
+    const date = new Date(stringify);
+
+    updateTimes(date);
+
+    setFinalTime(availableTimes.map((times) => <option>{times}</option>));
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleReservations(formData);
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      people: 1,
-      date: '',
-      time: '',
-      occasion: '',
-      preferences: '',
-      comments: '',
-    });
+    console.log(formData);
+
+    if (submitAPI) {
+      navigate('/confirmation');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        people: 1,
+        date: '',
+        occasion: '',
+        preferences: '',
+        comments: '',
+      });
+    }
   };
 
   return (
@@ -59,6 +69,7 @@ const Form = ({ handleReservations }) => {
           id='name'
           value={name}
           onChange={handleChang}
+          required
         />
       </div>
       <div className='email input'>
@@ -69,6 +80,7 @@ const Form = ({ handleReservations }) => {
           id='email'
           value={email}
           onChange={handleChang}
+          required
         />
       </div>
       <div className='phone input'>
@@ -79,6 +91,7 @@ const Form = ({ handleReservations }) => {
           id='phone'
           value={phone}
           onChange={handleChang}
+          required
         />
       </div>
       <div className='number-of-people input'>
@@ -89,6 +102,7 @@ const Form = ({ handleReservations }) => {
           id='people'
           value={people}
           onChange={handleChang}
+          required
         />
       </div>
       <div className='date input'>
@@ -98,18 +112,15 @@ const Form = ({ handleReservations }) => {
           name='date'
           id='date'
           value={date}
-          onChange={handleChang}
+          onChange={handleDateChange}
+          required
         />
       </div>
       <div className='time input'>
         <label htmlFor='time'>Select Time</label>
-        <input
-          type='time'
-          name='time'
-          id='time'
-          value={time}
-          onChange={handleChang}
-        />
+        <select id='time' name='time' required>
+          {finalTime}
+        </select>
       </div>
       <div className='occasion input'>
         <label htmlFor='occasion'>Occasion</label>
